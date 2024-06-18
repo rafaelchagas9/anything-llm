@@ -150,6 +150,24 @@ const KEY_MAPPING = {
     checks: [nonZero],
   },
 
+  // Azure LM Settings
+  AzureMLEndpoint: {
+    envKey: "AZURE_ML_ENDPOINT",
+    checks: [isNotEmpty, isValidURL],
+  },
+  AzureMLKey: {
+    envKey: "AZURE_ML_KEY",
+    checks: [isNotEmpty],
+  },
+  AzureMLDeployment: {
+    envKey: "AZURE_ML_DEPLOYMENT",
+    checks: [isNotEmpty],
+  },
+  AzureMLTokenLimit: {
+    envKey: "AZURE_ML_TOKEN_LIMIT",
+    checks: [nonZero],
+  },
+
   // Text Generation Web UI Settings
   TextGenWebUIBasePath: {
     envKey: "TEXT_GEN_WEB_UI_BASE_PATH",

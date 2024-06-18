@@ -18,6 +18,7 @@ import GroqLogo from "@/media/llmprovider/groq.png";
 import KoboldCPPLogo from "@/media/llmprovider/koboldcpp.png";
 import TextGenWebUILogo from "@/media/llmprovider/text-generation-webui.png";
 import LiteLLMLogo from "@/media/llmprovider/litellm.png";
+import AzureMLLogo from "@/media/llmprovider/azureml.png";
 
 import CohereLogo from "@/media/llmprovider/cohere.png";
 import OpenAiOptions from "@/components/LLMSelection/OpenAiOptions";
@@ -39,6 +40,7 @@ import CohereAiOptions from "@/components/LLMSelection/CohereAiOptions";
 import KoboldCPPOptions from "@/components/LLMSelection/KoboldCPPOptions";
 import TextGenWebUIOptions from "@/components/LLMSelection/TextGenWebUIOptions";
 import LiteLLMOptions from "@/components/LLMSelection/LiteLLMOptions";
+import AzureMLOptions from "@/components/LLMSelection/AzureMLOptions";
 
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import System from "@/models/system";
@@ -115,6 +117,13 @@ const LLMS = [
     logo: KoboldCPPLogo,
     options: (settings) => <KoboldCPPOptions settings={settings} />,
     description: "Run local LLMs using koboldcpp.",
+  },
+  {
+    name: "AzureML",
+    value: "azure-ml",
+    logo: AzureMLLogo,
+    options: (settings) => <AzureMLOptions settings={settings} />,
+    description: "Roda LLMs no Azure ML.",
   },
   {
     name: "Oobabooga Web UI",

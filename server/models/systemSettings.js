@@ -417,6 +417,13 @@ const SystemSettings = {
       KoboldCPPBasePath: process.env.KOBOLD_CPP_BASE_PATH,
       KoboldCPPTokenLimit: process.env.KOBOLD_CPP_MODEL_TOKEN_LIMIT,
 
+      // AzureML Keys
+      AzureMLEndpoint: process.env.AZURE_ML_ENDPOINT,
+      AzureMLKey: !!process.env.AZURE_ML_KEY,
+      AzureMLDeployment: process.env.AZURE_ML_DEPLOYMENT,
+      AzureMLTokenLimit: process.env.AZURE_ML_TOKEN_LIMIT || 4096,
+
+
       // Text Generation Web UI Keys
       TextGenWebUIBasePath: process.env.TEXT_GEN_WEB_UI_BASE_PATH,
       TextGenWebUITokenLimit: process.env.TEXT_GEN_WEB_UI_MODEL_TOKEN_LIMIT,

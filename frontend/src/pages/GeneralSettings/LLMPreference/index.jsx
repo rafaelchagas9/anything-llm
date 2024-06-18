@@ -42,6 +42,8 @@ import CohereAiOptions from "@/components/LLMSelection/CohereAiOptions";
 import KoboldCPPOptions from "@/components/LLMSelection/KoboldCPPOptions";
 import TextGenWebUIOptions from "@/components/LLMSelection/TextGenWebUIOptions";
 import LiteLLMOptions from "@/components/LLMSelection/LiteLLMOptions";
+import AzureMLLogo from "@/media/llmprovider/azureml.png";
+import AzureMLOptions from "@/components/LLMSelection/AzureMLOptions";
 
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import { CaretUpDown, MagnifyingGlass, X } from "@phosphor-icons/react";
@@ -187,6 +189,14 @@ export const AVAILABLE_LLM_PROVIDERS = [
     options: (settings) => <CohereAiOptions settings={settings} />,
     description: "Run Cohere's powerful Command models.",
     requiredConfig: ["CohereApiKey"],
+  },
+  {
+    name: "AzureML",
+    value: "azure-ml",
+    logo: AzureMLLogo,
+    options: (settings) => <AzureMLOptions settings={settings} />,
+    description: "Run local LLMs using AzureML.",
+    requiredConfig: ["AzureMLEndpoint", "AzureMLKey", "AzureMLDeployment"],
   },
   {
     name: "LiteLLM",

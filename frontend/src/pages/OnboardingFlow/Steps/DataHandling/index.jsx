@@ -18,6 +18,7 @@ import GroqLogo from "@/media/llmprovider/groq.png";
 import KoboldCPPLogo from "@/media/llmprovider/koboldcpp.png";
 import TextGenWebUILogo from "@/media/llmprovider/text-generation-webui.png";
 import LiteLLMLogo from "@/media/llmprovider/litellm.png";
+import AzureMLLogo from "@/media/llmprovider/azureml.png";
 
 import CohereLogo from "@/media/llmprovider/cohere.png";
 import ZillizLogo from "@/media/vectordbs/zilliz.png";
@@ -150,6 +151,13 @@ export const LLM_SELECTION_PRIVACY = {
       "Your model and chats are only accessible on the server running KoboldCPP",
     ],
     logo: KoboldCPPLogo,
+  },
+  azureml: {
+    name: "Azure ML",
+    description: [
+      "Your model and chats are only accessible on the server running Azure ML",
+    ],
+    logo: AzureMLLogo,
   },
   textgenwebui: {
     name: "Oobabooga Web UI",

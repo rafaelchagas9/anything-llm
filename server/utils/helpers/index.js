@@ -80,6 +80,9 @@ function getLLMProvider({ provider = null, model = null } = {}) {
     case "koboldcpp":
       const { KoboldCPPLLM } = require("../AiProviders/koboldCPP");
       return new KoboldCPPLLM(embedder, model);
+    case "azure-ml":
+      const { AzureML } = require("../AiProviders/azureML");
+      return new AzureML(embedder, model);
     case "textgenwebui":
       const { TextGenWebUILLM } = require("../AiProviders/textGenWebUI");
       return new TextGenWebUILLM(embedder, model);
